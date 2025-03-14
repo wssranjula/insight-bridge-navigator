@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import LineChart from '@/components/ui/LineChart';
-import { Badge } from '@/components/ui/Badge';
+import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 import { ArrowUp, ArrowDown, Percent } from 'lucide-react';
 

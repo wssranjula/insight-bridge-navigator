@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight, TrendingUp, BarChart, FileText, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/Badge';
+import { Badge } from '@/components/ui/badge';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import SearchBar from '@/components/dashboard/SearchBar';

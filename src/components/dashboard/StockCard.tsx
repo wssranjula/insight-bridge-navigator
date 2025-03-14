@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { ArrowUp, ArrowDown, ChevronRight, BarChart3, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/Badge';
+import { Badge } from '@/components/ui/badge';
 import LineChart from '@/components/ui/LineChart';
 import { cn } from '@/lib/utils';
 
