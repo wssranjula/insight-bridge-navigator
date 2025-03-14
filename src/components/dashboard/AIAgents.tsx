@@ -49,7 +49,7 @@ const AIAgents = () => {
           <Bot className="h-6 w-6 text-brand-blue" />
           <h2 className="text-xl font-medium">AI Research Agents</h2>
         </div>
-        <Badge variant="info">Powered by Neural Networks</Badge>
+        <Badge variant="secondary">Powered by Neural Networks</Badge>
       </div>
 
       <Tabs defaultValue={aiAgents[0].id} className="mt-2" onValueChange={setSelectedAgent}>

@@ -90,11 +90,11 @@ const NewsFeed = () => {
   const getSentimentBadge = (sentiment: string) => {
     switch (sentiment) {
       case 'positive':
-        return <Badge variant="positive">Positive</Badge>;
+        return <Badge variant="secondary" className="bg-green-500/10 text-green-600 dark:bg-green-500/20 dark:text-green-400">Positive</Badge>;
       case 'negative':
-        return <Badge variant="negative">Negative</Badge>;
+        return <Badge variant="secondary" className="bg-red-500/10 text-red-600 dark:bg-red-500/20 dark:text-red-400">Negative</Badge>;
       default:
-        return <Badge variant="neutral">Neutral</Badge>;
+        return <Badge variant="secondary">Neutral</Badge>;
     }
   };
 

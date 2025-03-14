@@ -72,7 +72,7 @@ const SentimentAnalysis = () => {
     <div className="glass-card rounded-2xl p-6 animate-fade-in">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-medium">Market Sentiment Analysis</h2>
-        <Badge variant="info">AI-Powered</Badge>
+        <Badge variant="secondary">AI-Powered</Badge>
       </div>
       
       {renderSentimentGauge()}

@@ -123,13 +123,13 @@ const MarketOverview = () => {
           <Badge variant="secondary" className="flex items-center gap-1">
             Market Cap: LKR 4.2T
           </Badge>
-          <Badge variant="positive" className="flex items-center gap-1">
+          <Badge variant="secondary" className="flex items-center gap-1 bg-green-500/10 text-green-600 dark:bg-green-500/20 dark:text-green-400">
             Advancers: 124
           </Badge>
-          <Badge variant="negative" className="flex items-center gap-1">
+          <Badge variant="secondary" className="flex items-center gap-1 bg-red-500/10 text-red-600 dark:bg-red-500/20 dark:text-red-400">
             Decliners: 67
           </Badge>
-          <Badge variant="neutral" className="flex items-center gap-1">
+          <Badge variant="secondary" className="flex items-center gap-1">
             Unchanged: 31
           </Badge>
         </div>
