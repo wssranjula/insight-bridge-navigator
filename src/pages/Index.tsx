@@ -10,6 +10,7 @@ import MarketOverview from '@/components/dashboard/MarketOverview';
 import StockCard from '@/components/dashboard/StockCard';
 import NewsFeed from '@/components/dashboard/NewsFeed';
 import SentimentAnalysis from '@/components/dashboard/SentimentAnalysis';
+import AIAgents from '@/components/dashboard/AIAgents';
 import { Link } from 'react-router-dom';
 
 // Mock stock data for demonstration
@@ -73,7 +74,7 @@ const Index = () => {
     // Animate items sequentially
     const animationTimeout = setTimeout(() => {
       const items = [];
-      for (let i = 0; i < 8; i++) {
+      for (let i = 0; i < 10; i++) { // Increased number to account for new components
         items.push(i);
         setAnimatedItems([...items]);
       }
@@ -123,12 +124,35 @@ const Index = () => {
                 Comprehensive market intelligence at your fingertips
               </h2>
               <p className="text-xl text-muted-foreground animate-fade-in animate-delay-200">
-                Experience a powerful dashboard that brings together technical, fundamental, and sentiment analysis in one place.
+                Experience a powerful dashboard that brings together technical, fundamental, and AI-powered sentiment analysis in one place.
               </p>
             </div>
             
             <div className="mb-8 max-w-3xl mx-auto animate-fade-in animate-delay-300">
               <SearchBar />
+            </div>
+            
+            {/* AI Agents Feature Highlight */}
+            <div className="glass-card rounded-2xl p-6 md:p-8 mb-10 bg-gradient-to-r from-brand-blue/10 to-brand-light-blue/10 animate-fade-in animate-delay-100">
+              <div className="flex flex-col md:flex-row gap-6 items-center">
+                <div className="md:w-16 flex-shrink-0 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-lg bg-brand-blue/20 flex items-center justify-center">
+                    <Bot className="h-6 w-6 text-brand-blue" />
+                  </div>
+                </div>
+                <div className="flex-grow text-center md:text-left">
+                  <Badge variant="outline" className="mb-2">New Feature</Badge>
+                  <h3 className="text-xl font-medium mb-2">Advanced AI Research Agents</h3>
+                  <p className="text-muted-foreground">
+                    Our platform leverages specialized AI agents for market research and document analysis, providing you with deeper insights and saving you hours of research time.
+                  </p>
+                </div>
+                <div className="flex-shrink-0">
+                  <Button className="bg-brand-blue hover:bg-brand-dark-blue">
+                    Learn More
+                  </Button>
+                </div>
+              </div>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
@@ -177,23 +201,7 @@ const Index = () => {
                 <NewsFeed />
               </div>
               <div className={animatedItems.includes(7) ? 'animate-slide-up animate-delay-600' : 'opacity-0'}>
-                <div className="glass-card rounded-2xl p-6">
-                  <h3 className="text-xl font-medium mb-6">Quick Access</h3>
-                  <div className="space-y-4">
-                    <Button variant="outline" className="w-full justify-start text-left">
-                      <TrendingUp className="mr-2 h-5 w-5 text-brand-blue" />
-                      <span>Technical Analysis</span>
-                    </Button>
-                    <Button variant="outline" className="w-full justify-start text-left">
-                      <BarChart className="mr-2 h-5 w-5 text-brand-blue" />
-                      <span>Fundamental Analysis</span>
-                    </Button>
-                    <Button variant="outline" className="w-full justify-start text-left">
-                      <FileText className="mr-2 h-5 w-5 text-brand-blue" />
-                      <span>Document Summarization</span>
-                    </Button>
-                  </div>
-                </div>
+                <AIAgents />
               </div>
             </div>
           </div>

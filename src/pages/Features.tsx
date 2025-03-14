@@ -1,5 +1,5 @@
 
-import { CheckCircle, ArrowRight, BarChart2, Search, Zap, FileText, BarChart, LineChart, TrendingUp, PieChart } from 'lucide-react';
+import { CheckCircle, ArrowRight, BarChart2, Search, Zap, FileText, BarChart, LineChart, TrendingUp, PieChart, Brain, Bot } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Header from '@/components/layout/Header';
@@ -7,6 +7,12 @@ import Footer from '@/components/layout/Footer';
 
 const FeaturesPage = () => {
   const features = [
+    {
+      title: 'AI Research Agents',
+      description: 'Specialized autonomous agents that continuously analyze market data and documents to extract actionable insights.',
+      icon: <Bot className="h-8 w-8 text-brand-blue" />,
+      badge: 'Advanced'
+    },
     {
       title: 'Real-Time Data Aggregation',
       description: 'Integration with CSE data, company websites, news feeds, and government sources.',
@@ -34,7 +40,7 @@ const FeaturesPage = () => {
     {
       title: 'Document Summarization',
       description: 'Uses advanced NLP to provide concise summaries of lengthy financial and regulatory documents.',
-      icon: <FileText className="h-8 w-8 text-brand-blue" />,
+      icon: <Brain className="h-8 w-8 text-brand-blue" />,
       badge: 'AI-Powered'
     },
     {
@@ -93,11 +99,40 @@ const FeaturesPage = () => {
       
       <main className="flex-grow pt-24 pb-16">
         <section className="container mx-auto px-6 py-16">
-          <div className="max-w-3xl mx-auto text-center mb-20 animate-fade-in">
+          <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">Powerful Features for Sri Lankan Investors</h1>
             <p className="text-xl text-muted-foreground">
-              Discover how our platform brings together multi-domain insights to transform your investment decisions.
+              Discover how our platform brings together multi-domain insights and AI-powered research to transform your investment decisions.
             </p>
+          </div>
+
+          {/* AI Agents Feature Spotlight */}
+          <div className="max-w-4xl mx-auto mb-16 glass-card rounded-2xl p-8 bg-gradient-to-r from-brand-blue/10 to-brand-light-blue/10 animate-fade-in">
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="md:w-1/3 flex-shrink-0">
+                <div className="aspect-square rounded-2xl bg-brand-blue/20 flex items-center justify-center p-8">
+                  <Bot className="w-24 h-24 text-brand-blue" />
+                </div>
+              </div>
+              <div className="md:w-2/3">
+                <Badge className="mb-3">Featured Technology</Badge>
+                <h2 className="text-2xl md:text-3xl font-medium mb-4">AI Research & Document Analysis Agents</h2>
+                <p className="text-lg text-muted-foreground mb-4">
+                  Our platform leverages specialized autonomous AI agents that continuously gather, analyze, and interpret market data and financial documents.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {['Reduces research time by 85%', 'Updates insights in real-time', 'Identifies patterns human analysts might miss', 'Summarizes lengthy documents in seconds'].map((point, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-brand-blue flex-shrink-0 mt-0.5" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button className="bg-brand-blue hover:bg-brand-dark-blue">
+                  Learn How It Works
+                </Button>
+              </div>
+            </div>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
