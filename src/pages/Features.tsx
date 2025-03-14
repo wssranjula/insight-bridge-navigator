@@ -1,7 +1,7 @@
 
 import { CheckCircle, ArrowRight, BarChart2, Search, Zap, FileText, BarChart, LineChart, TrendingUp, PieChart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/Badge';
+import { Badge } from '@/components/ui/badge';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
